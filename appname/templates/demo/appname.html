@@ -4,9 +4,9 @@
     <head>
         <title>fortune</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-            <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-            <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
       </head>
     <body bgcolor = {{bgColor}}>
@@ -18,18 +18,18 @@
 <form action="{% url 'appmain' %}" method="GET">
 <p class="your_zodiac">あなたの星座を入力</p>
 <select name="zodiac"required>
-<option value="zodiac1">おひつじ座</option>
-<option value="zodiac2">おうし座</option>
-<option value="zodiac3">ふたご座</option>
-<option value="zodiac4">かに座</option>
-<option value="zodiac5">しし座</option>
-<option value="zodiac6">おとめ座</option>
-<option value="zodiac7">てんびん座</option>
-<option value="zodiac8">さそり座</option>
-<option value="zodiac9">いて座</option>
-<option value="zodiac10">やぎ座</option>
-<option value="zodiac11">みずがめ座</option>
-<option value="zodiac12">うお座</option>
+<option value="zodiac1">おひつじ座 (3/21~4/19)</option>
+<option value="zodiac2">おうし座 (4/20~5/20)</option>
+<option value="zodiac3">ふたご座 (5/21~6/21)</option>
+<option value="zodiac4">かに座 (6/22~7/22)</option>
+<option value="zodiac5">しし座 (7/23~8/22)</option>
+<option value="zodiac6">おとめ座 (8/23~9/22)</option>
+<option value="zodiac7">てんびん座 (9/23~10/23)</option>
+<option value="zodiac8">さそり座 (10/24~11/21)</option>
+<option value="zodiac9">いて座 (11/22~12/21)</option>
+<option value="zodiac10">やぎ座 (12/22~1/19)</option>
+<option value="zodiac11">みずがめ座 (1/20~2/18)</option>
+<option value="zodiac12">うお座 (2/19~3/20)</option>
 </select>
 <input type="submit" value="送信" onclick="youtube.src={{url}}">
 </form>
@@ -44,16 +44,16 @@
 <br>{{zdName}}の今日の運勢</br>
 </div>
 <div class = "detail_fortune">
-<br>総合運 : <font color="#00DD00" size="5">{{zdTotal}}</font></br>
-<br>恋愛運 : <font color="red" size="5">{{zdLove}}</font></br>
-<br>金財運 : <font color="gold" size="5">{{zdMoney}}</font></br>
-<br>仕事運 : <font color="blue" size="5">{{zdWork}}</font></br>
+<br>総合運 : <font color="#00DD00" size="6">{{zdTotal}}</font></br>
+<br>恋愛運 : <font color="red" size="6">{{zdLove}}</font></br>
+<br>金財運 : <font color="gold" size="6">{{zdMoney}}</font></br>
+<br>仕事運 : <font color="blue" size="6">{{zdWork}}</font></br>
 <br></br>
 <div class = "anatahe">
-<br>そんなあなたへ</br>
+<br>～そんなあなたへ～</br>
 </div>
 <br>今日のラッキーカラー : <font color ={{bgColor}} >{{tdColor}}</font></br>
-<br>今日のラッキーナンバー : <font color = "#ff6600">{{luckyNum}}</font></br>
+<br>今日のラッキーナンバー : <font color = "#ff6600" size = "6">{{luckyNum}}</font></br>
 </div>
 <div class = "osusume">
 <br></br>

@@ -1,14 +1,15 @@
 .page-header{
-  font-size: 50px;
+  font-size: 55px;
   text-align: center;
 	color: #ffffff; 
 	background: #9966ff;
 	background-size: contain;
 	font-family: "Monotype Corsiva";
+     padding : 20px 0px 0px 0px;
 }
 
 body{
-  background: #ffffff;
+  background: #fffafa;
 	margin-left: 100px;
 	margin-right: 100px;
 }
@@ -33,7 +34,7 @@ select{
     padding:10px;
     font-size:1.3em;
     font-family:Arial, sans-serif;
-    color:#aaa;
+    color:#222222;
     border:solid 1px #ccc;
     margin:0 0 20px;
     width:300px;

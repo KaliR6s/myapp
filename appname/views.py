@@ -16,8 +16,8 @@ youtube_list_selectTwo = ['https://www.youtube.com/watch?v=0P6klz6BTek&index=20&
 'https://www.youtube.com/watch?v=L-UGLgRUtOs',
 'https://www.youtube.com/watch?v=s_2a4mMR9BU'] #いい人向け
 
-bgColorNum = {0:'white',1:'lightsteelblue',2:'lightyellow',3:'gainsboro',4:'pink',5:'lightgreen',6:'orange'}
-bgColorList = {'white':'#ffffff','lightsteelblue':'#b0c4de','lightyellow':'#ffffe0','gainsboro':'#dcdcdc','pink':'#ffc0cb','lightgreen':'#90ee90','orange':'#FF8856'}
+bgColorNum = {0:'white',1:'黄色',2:'赤色',3:'青色',4:'ピンク色',5:'緑色',6:'紫色'}
+bgColorList = {'white':'#ffffff','黄色':'#FFCC00','赤色':'#ff0000','青色':'#0000ff','ピンク色':'#ff69b4','緑色':'#008000','紫色':'#9400d3'}
 fortuneList = ['☆☆☆☆☆☆☆☆☆☆','★☆☆☆☆☆☆☆☆☆','★★☆☆☆☆☆☆☆☆','★★★☆☆☆☆☆☆☆','★★★★☆☆☆☆☆☆','★★★★★☆☆☆☆☆','★★★★★★☆☆☆☆','★★★★★★★☆☆☆','★★★★★★★★☆☆','★★★★★★★★★☆','★★★★★★★★★★']
 zdNameDic = {'zodiac1':'おひつじ座','zodiac2':'おうし座','zodiac3':'ふたご座','zodiac4':'かに座','zodiac5':'しし座','zodiac6':'おとめ座',
 'zodiac7':'てんびん座','zodiac8':'さそり座','zodiac9':'いて座','zodiac10':'やぎ座','zodiac11':'みずがめ座','zodiac12':'うお座'}
@@ -76,8 +76,8 @@ def appmain(request):
             soup2 = BeautifulSoup(html2, "lxml")
             a = str(soup2.div(class_='hako'))     #今日の得点を取得
             totalNum = int(re.search(r'\d+',a).group())    #得点を抽出
-            bgColor = bgColorList[bgColorNum[totalNum%6]]
-            tdColor = bgColorNum[totalNum%6]
+            bgColor = bgColorList[bgColorNum[(totalNum+1)%6+1]]
+            tdColor = bgColorNum[(totalNum+1)%6+1]
             luckyNum = totalNum%9 + 1
             if totalNum <50:
                 youtubeUrl = youtube_list_selectOne[(luckyNum+123) % len(youtube_list_selectOne)]
@@ -120,8 +120,8 @@ def appmain(request):
             soup2 = BeautifulSoup(html2, "lxml")
             a = str(soup2.div(class_='hako'))     #今日の得点を取得
             totalNum = int(re.search(r'\d+',a).group())    #得点を抽出
-            bgColor = bgColorList[bgColorNum[totalNum%6]]
-            tdColor = bgColorNum[totalNum%6]
+            bgColor = bgColorList[bgColorNum[(totalNum+2)%6+1]]
+            tdColor = bgColorNum[(totalNum+2)%6+1]
             luckyNum = totalNum%9 + 1
             if totalNum <50:
                 youtubeUrl = youtube_list_selectOne[(luckyNum+123) % len(youtube_list_selectOne)]
@@ -163,8 +163,8 @@ def appmain(request):
             soup2 = BeautifulSoup(html2, "lxml")
             a = str(soup2.div(class_='hako'))     #今日の得点を取得
             totalNum = int(re.search(r'\d+',a).group())    #得点を抽出
-            bgColor = bgColorList[bgColorNum[totalNum%6]]
-            tdColor = bgColorNum[totalNum%6]
+            bgColor = bgColorList[bgColorNum[(totalNum+3)%6+1]]
+            tdColor = bgColorNum[(totalNum+3)%6+1]
             luckyNum = totalNum%9 + 1
             if totalNum <50:
                 youtubeUrl = youtube_list_selectOne[(luckyNum+123) % len(youtube_list_selectOne)]
@@ -206,8 +206,8 @@ def appmain(request):
             soup2 = BeautifulSoup(html2, "lxml")
             a = str(soup2.div(class_='hako'))     #今日の得点を取得
             totalNum = int(re.search(r'\d+',a).group())    #得点を抽出
-            bgColor = bgColorList[bgColorNum[totalNum%6]]
-            tdColor = bgColorNum[totalNum%6]
+            bgColor = bgColorList[bgColorNum[(totalNum+4)%6+1]]
+            tdColor = bgColorNum[(totalNum+4)%6+1]
             luckyNum = totalNum%9 + 1
             if totalNum <50:
                 youtubeUrl = youtube_list_selectOne[(luckyNum+123) % len(youtube_list_selectOne)]
@@ -249,8 +249,8 @@ def appmain(request):
             soup2 = BeautifulSoup(html2, "lxml")
             a = str(soup2.div(class_='hako'))     #今日の得点を取得
             totalNum = int(re.search(r'\d+',a).group())    #得点を抽出
-            bgColor = bgColorList[bgColorNum[totalNum%6]]
-            tdColor = bgColorNum[totalNum%6]
+            bgColor = bgColorList[bgColorNum[(totalNum+5)%6+1]]
+            tdColor = bgColorNum[(totalNum+5)%6+1]
             luckyNum = totalNum%9 + 1
             if totalNum <50:
                 youtubeUrl = youtube_list_selectOne[(luckyNum+123) % len(youtube_list_selectOne)]
@@ -292,8 +292,8 @@ def appmain(request):
             soup2 = BeautifulSoup(html2, "lxml")
             a = str(soup2.div(class_='hako'))     #今日の得点を取得
             totalNum = int(re.search(r'\d+',a).group())    #得点を抽出
-            bgColor = bgColorList[bgColorNum[totalNum%6]]
-            tdColor = bgColorNum[totalNum%6]
+            bgColor = bgColorList[bgColorNum[(totalNum+6)%6+1]]
+            tdColor = bgColorNum[(totalNum+6)%6+1]
             luckyNum = totalNum%9 + 1
             if totalNum <50:
                 youtubeUrl = youtube_list_selectOne[(luckyNum+123) % len(youtube_list_selectOne)]
@@ -335,8 +335,8 @@ def appmain(request):
             soup2 = BeautifulSoup(html2, "lxml")
             a = str(soup2.div(class_='hako'))     #今日の得点を取得
             totalNum = int(re.search(r'\d+',a).group())    #得点を抽出
-            bgColor = bgColorList[bgColorNum[totalNum%6]]
-            tdColor = bgColorNum[totalNum%6]
+            bgColor = bgColorList[bgColorNum[(totalNum+7)%6+1]]
+            tdColor = bgColorNum[(totalNum+7)%6+1]
             luckyNum = totalNum%9 + 1
             if totalNum <50:
                 youtubeUrl = youtube_list_selectOne[(luckyNum+123) % len(youtube_list_selectOne)]
@@ -378,8 +378,8 @@ def appmain(request):
             soup2 = BeautifulSoup(html2, "lxml")
             a = str(soup2.div(class_='hako'))     #今日の得点を取得
             totalNum = int(re.search(r'\d+',a).group())    #得点を抽出
-            bgColor = bgColorList[bgColorNum[totalNum%6]]
-            tdColor = bgColorNum[totalNum%6]
+            bgColor = bgColorList[bgColorNum[(totalNum+8)%6+1]]
+            tdColor = bgColorNum[(totalNum+8)%6+1]
             luckyNum = totalNum%9 + 1
             if totalNum <50:
                 youtubeUrl = youtube_list_selectOne[(luckyNum+123) % len(youtube_list_selectOne)]
@@ -421,8 +421,8 @@ def appmain(request):
             soup2 = BeautifulSoup(html2, "lxml")
             a = str(soup2.div(class_='hako'))     #今日の得点を取得
             totalNum = int(re.search(r'\d+',a).group())    #得点を抽出
-            bgColor = bgColorList[bgColorNum[totalNum%6]]
-            tdColor = bgColorNum[totalNum%6]
+            bgColor = bgColorList[bgColorNum[(totalNum+9)%6+1]]
+            tdColor = bgColorNum[(totalNum+9)%6+1]
             luckyNum = totalNum%9 + 1
             if totalNum <50:
                 youtubeUrl = youtube_list_selectOne[(luckyNum+123) % len(youtube_list_selectOne)]
@@ -464,8 +464,8 @@ def appmain(request):
             soup2 = BeautifulSoup(html2, "lxml")
             a = str(soup2.div(class_='hako'))     #今日の得点を取得
             totalNum = int(re.search(r'\d+',a).group())    #得点を抽出
-            bgColor = bgColorList[bgColorNum[totalNum%6]]
-            tdColor = bgColorNum[totalNum%6]
+            bgColor = bgColorList[bgColorNum[(totalNum+10)%6+1]]
+            tdColor = bgColorNum[(totalNum+10)%6+1]
             luckyNum = totalNum%9 + 1
             if totalNum <50:
                 youtubeUrl = youtube_list_selectOne[(luckyNum+123) % len(youtube_list_selectOne)]
@@ -507,8 +507,8 @@ def appmain(request):
             soup2 = BeautifulSoup(html2, "lxml")
             a = str(soup2.div(class_='hako'))     #今日の得点を取得
             totalNum = int(re.search(r'\d+',a).group())    #得点を抽出
-            bgColor = bgColorList[bgColorNum[totalNum%6]]
-            tdColor = bgColorNum[totalNum%6]
+            bgColor = bgColorList[bgColorNum[(totalNum+11)%6+1]]
+            tdColor = bgColorNum[(totalNum+11)%6+1]
             luckyNum = totalNum%9 + 1
             if totalNum <50:
                 youtubeUrl = youtube_list_selectOne[(luckyNum+123) % len(youtube_list_selectOne)]
@@ -550,8 +550,8 @@ def appmain(request):
             soup2 = BeautifulSoup(html2, "lxml")
             a = str(soup2.div(class_='hako'))     #今日の得点を取得
             totalNum = int(re.search(r'\d+',a).group())    #得点を抽出
-            bgColor = bgColorList[bgColorNum[totalNum%6]]
-            tdColor = bgColorNum[totalNum%6]
+            bgColor = bgColorList[bgColorNum[(totalNum+12)%6+1]]
+            tdColor = bgColorNum[(totalNum+12)%6+1]
             luckyNum = totalNum%9 + 1
             if totalNum <50:
                 youtubeUrl = youtube_list_selectOne[(luckyNum+123) % len(youtube_list_selectOne)]
