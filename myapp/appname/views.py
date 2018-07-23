@@ -25,11 +25,7 @@ zdNameDic = {'zodiac1':'おひつじ座','zodiac2':'おうし座','zodiac3':'ふ
 # Create your views here.
 def appmain(request):
     youtubeUrl = random.choice(youtube_list_selectOne)
-    zd = a = tdColor = luckyNum = ''
-    zdName = 'あなた'
-    character = 'ela.png'
-    imgFlag = 'none'
-    pngFlag = 'display'
+    zd = a = tdColor = character = luckyNum = zdName = ''
     t3='https://www.youtube.com/'
     bgColor = bgColorList[bgColorNum[0]]
     totalNum = 0
@@ -41,8 +37,6 @@ def appmain(request):
             t1 = t[0]+'embed/'
             t2 = t[1].split('&')
             t3 = t1+t2[0]
-            imgFlag = 'display'
-            pngFlag = 'none'
         if zd == '':
             zdTotal = zdLove = zdMoney = zdWork = ''
         elif zd == 'zodiac1':
@@ -561,6 +555,6 @@ def appmain(request):
             t1 = t[0]+'embed/'
             t2 = t[1].split('&')
             t3 = t1+t2[0]
-
+            
         return render(request, 'demo/appname.html', {'url': t3 , 'zdTotal':zdTotal,'zdLove':zdLove,'zdMoney':zdMoney,'zdWork':zdWork,'bgColor':bgColor,
-        'tdColor':tdColor,'character':character,'luckyNum':luckyNum,'zdName':zdName,'imgFlag':imgFlag,'pngFlag':pngFlag})
+        'tdColor':tdColor,'character':character,'luckyNum':luckyNum,'zdName':zdName})

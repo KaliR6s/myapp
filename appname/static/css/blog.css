@@ -1,0 +1,104 @@
+.page-header{
+  font-size: 50px;
+  text-align: center;
+	color: #ffffff; 
+	background: #9966ff;
+	background-size: contain;
+	font-family: "Monotype Corsiva";
+}
+
+body{
+  background: #ffffff;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+.img_block img{
+	display: block;
+	margin: auto;
+}
+
+.your_zodiac{
+  margin-left: 50px;
+	font-size:35px;
+	font-weight: bold;
+  color: #FF7C00;
+  background: -webkit-linear-gradient(top, #FFB76B 0%, #FFA73D 50%, #FF7C00 51%, #FF7F04 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+select{
+	border:0;
+    padding:10px;
+    font-size:1.3em;
+    font-family:Arial, sans-serif;
+    color:#aaa;
+    border:solid 1px #ccc;
+    margin:0 0 20px;
+    width:300px;
+	-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+	-moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+}
+
+input{
+	border:solid 1px #ccc;
+	padding:8px 20px;
+	font-family:Arial, sans-serif;
+	font-size:1.0em;
+	text-transform:uppercase;
+	font-weight:bold;
+	background: "smokewhite";
+	color:#333;
+	cursor:pointer;
+}
+
+font{
+	padding-left: 10px;
+}
+
+.your_fortune{
+  margin-left: 50px;
+	font-size: 35px;
+  font-weight: bold;
+  color: #DA8E00;
+  background: -webkit-linear-gradient(-45deg, #F7DE05, #DA8E00, #EDAC06, #F7DE05, #ECB802, #DAAF08, #B67B03, #DA8E00, #EDAC06, #F7DE05, #ECB802, #EDAC06);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.detail_fortune{
+  margin-left: 50px;
+	padding-left: 10px;
+	font-size: 25px;
+	font-weight: bold;
+	letter-spacing: 0.8em;
+}
+
+.anatahe{
+	font-size: 35px;
+  font-weight: bold;
+  color: #ACB6E5;
+  background: -webkit-linear-gradient(0deg, #ACB6E5, #86FDE8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.osusume{
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  color: #FF8C00;
+  background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+iframe{
+   display : block;
+   margin : 0 auto;
+}

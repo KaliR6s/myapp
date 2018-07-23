@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>fortune</title>
+    <body bgcolor = {{bgColor}}>
+        <div class="page-header">
+            <h1>今日の運勢</h1>
+        </div>
+<form action="{% url 'appmain' %}" method="GET">
+星座:<select name="zodiac"required>
+<option value="zodiac1">おひつじ座</option>
+<option value="zodiac2">おうし座</option>
+<option value="zodiac3">ふたご座</option>
+<option value="zodiac4">かに座</option>
+<option value="zodiac5">しし座</option>
+<option value="zodiac6">おとめ座</option>
+<option value="zodiac7">てんびん座</option>
+<option value="zodiac8">さそり座</option>
+<option value="zodiac9">いて座</option>
+<option value="zodiac10">やぎ座</option>
+<option value="zodiac11">みずがめ座</option>
+<option value="zodiac12">うお座</option>
+</select>
+<input type="submit" value="送信" onclick="youtube.src={{url}}">
+</form>
+<br></br>
+<img src = {{character}}>
+<br>{{zdName}}の今日の運勢</br>
+<br>総合運 : <font color="#00DD00" size="5">{{zdTotal}}</font></br>
+<br>恋愛運 : {{zdLove}}</br>
+<br>金運 : {{zdMoney}}</br>
+<br>仕事運 : <font color="blue" size="5">{{zdWork}}</font></br>
+<br>今日のラッキーカラー : {{tdColor}}</br>
+<br>今日のラッキーナンバー : {{luckyNum}}</br>
+<br>↓そんなあなたに今日のオススメの動画</br>
+<iframe width="1500" height="800" src={{url}} name="youtube"frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+    </body>
+</html>

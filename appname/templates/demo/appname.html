@@ -1,13 +1,23 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html>
     <head>
         <title>fortune</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+            <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+            <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+      </head>
     <body bgcolor = {{bgColor}}>
+	  <div class = "main">
         <div class="page-header">
-            <h1>今日の運勢</h1>
+            <p>今日の運勢　today's fortune</p>
         </div>
+      <div class = "under-title">
 <form action="{% url 'appmain' %}" method="GET">
-星座:<select name="zodiac"required>
+<p class="your_zodiac">あなたの星座を入力</p>
+<select name="zodiac"required>
 <option value="zodiac1">おひつじ座</option>
 <option value="zodiac2">おうし座</option>
 <option value="zodiac3">ふたご座</option>
@@ -24,16 +34,35 @@
 <input type="submit" value="送信" onclick="youtube.src={{url}}">
 </form>
 <br></br>
-<img src = {{character}}>
+<br></br>
+<div class="img_block">
+<img src = {{character}} style = "display:{{imgFlag}}" height="200" width="1000" align="center">
+<img src = "{% static 'ela.png' %}" style = "display:{{pngFlag}}" height="800" width="1350" align="center">
+</div>
+<br></br>
+<div class = "your_fortune">
 <br>{{zdName}}の今日の運勢</br>
+</div>
+<div class = "detail_fortune">
 <br>総合運 : <font color="#00DD00" size="5">{{zdTotal}}</font></br>
-<br>恋愛運 : {{zdLove}}</br>
-<br>金運 : {{zdMoney}}</br>
+<br>恋愛運 : <font color="red" size="5">{{zdLove}}</font></br>
+<br>金財運 : <font color="gold" size="5">{{zdMoney}}</font></br>
 <br>仕事運 : <font color="blue" size="5">{{zdWork}}</font></br>
-<br>今日のラッキーカラー : {{tdColor}}</br>
-<br>今日のラッキーナンバー : {{luckyNum}}</br>
+<br></br>
+<div class = "anatahe">
+<br>そんなあなたへ</br>
+</div>
+<br>今日のラッキーカラー : <font color ={{bgColor}} >{{tdColor}}</font></br>
+<br>今日のラッキーナンバー : <font color = "#ff6600">{{luckyNum}}</font></br>
+</div>
+<div class = "osusume">
+<br></br>
 <br>↓そんなあなたに今日のオススメの動画</br>
-<iframe width="1500" height="800" src={{url}} name="youtube"frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
+</div>
+<iframe width="1200" height="600" src={{url}} name="youtube"frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<br></br>
+<br></br>
+        </div>
+	  </div>
     </body>
 </html>
